@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Exercícios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Cadastro de Exercícios</h1>
+<form id="form-exercicios">
+    <label for="nome">Nome do Exercício:</label>
+    <input type="text" id="nome" required>
+
+    <label for="tipo">Tipo de Exercício:</label>
+    <select id="tipo" required>
+        <option value="">Selecione</option>
+        <option value="musculacao">Musculação</option>
+        <option value="cardio">Cardio</option>
+        <option value="flexibilidade">Flexibilidade</option>
+    </select>
+
+    <label for="duracao">Duração (min):</label>
+    <input type="number" id="duracao" required min="1">
+
+    <label for="data">Data:</label>
+    <input type="date" id="data" required>
+
+    <button type="submit">Cadastrar Exercício</button>
+</form>
+
+<div id="pesquisa">
+    <h2>Pesquisar Exercícios</h2>
+    
+    <label for="pesquisa-tipo-input">Tipo:</label>
+    <input type="text" id="pesquisa-tipo-input" placeholder="Digite o tipo do exercício...">
+
+    <label for="pesquisa-data-input">Data:</label>
+    <input type="date" id="pesquisa-data-input" placeholder="Selecione a data...">
+
+    <button id="pesquisar-btn">Pesquisar</button>
+</div>
+
+<div id="exercicio-lista">
+    <h2>Lista de Exercícios Cadastrados</h2>
+    <table id="tabela-exercicios">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Duração (min)</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
